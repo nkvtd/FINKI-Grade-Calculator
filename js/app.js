@@ -47,11 +47,14 @@ function getInput(subjectName) {
         { key: "firstMidterm", label: "Поени од прв колоквиум" },
         { key: "secondMidTerm", label: "Поени од втор колоквиум" },
         { key: "firstMidtermTheoretical", label: "Поени од прв колоквиум теорија" },
-        { key: "secondMidTermTheoretical", label: "Поени од втор колоквиум теорија" },
         { key: "firstMidtermPractical", label: "Поени од прв колоквиум практично" },
+        { key: "secondMidTermTheoretical", label: "Поени од втор колоквиум теорија" },
         { key: "secondMidTermPractical", label: "Поени од втор колоквиум практично" },
         { key: "labs", label: "Поени од лабораториски вежби" },
-        { key: "quiz", label: "Поени од тестови" }
+        { key: "quiz", label: "Поени од тестови" },
+        { key: "attendance", label: "Поени за присуство" },
+        { key: "project", label: "Поени од проект" },
+        { key: "auds", label: "Поени од аудиториски вежби" }
     ];
 
 
@@ -98,7 +101,10 @@ function getPoints(subject) {
         "firstMidtermPractical",
         "secondMidTermPractical",
         "labs",
-        "quiz"
+        "quiz",
+        "attendance",
+        "project",
+        "auds"
     ];
 
     fields.forEach((field) => {
