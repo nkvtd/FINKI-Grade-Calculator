@@ -12,7 +12,7 @@ body{
     vertical-align: baseline;
 }
 #panel{
-    min-width: 700px;
+    max-width: 700px;
     width: 700px;
     margin: 2em auto;
     background-color: #fff;
@@ -27,7 +27,7 @@ body{
 #subject-selector-container {
     width: 20%;
     overflow-y: auto;
-    min-height: 500px;
+    /*min-height: 500px;*/
     height: 90vh;
     justify-content: flex-end;
     border-bottom-left-radius: 24px;
@@ -176,7 +176,7 @@ input:checked + .slider::before {
 
 #calculation-container{
     width: 400px;
-    min-width: 400px;
+    /*min-width: 400px;*/
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -193,4 +193,109 @@ input:checked + .slider::before {
     position: absolute;
     bottom: 0;
     font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #panel {
+        width: 90%;
+        max-width: none;
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 10px;
+    }
+
+    #subject-selector-container {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        order: 2;
+        padding: 10px;
+    }
+
+    #subject-selector {
+        border-radius: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: #f0f1f3;
+        padding: 5px;
+    }
+
+    #subject-selector .subject {
+        margin: 3px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #info-panel-container {
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #toggle-labels {
+        font-size: 14px;
+    }
+
+    #input-set {
+        width: 100%;
+        min-width: auto;
+        padding: 5px;
+    }
+
+    .input-field {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-field label {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .input-field input {
+        width: 70px;
+        font-size: 16px;
+    }
+
+    #calculate-button-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    #calculate-button {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    #calculation-container {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #footer {
+        position: relative;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+        word-wrap: break-word;
+    }
 }
