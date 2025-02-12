@@ -33,7 +33,14 @@
     "firstMidterm": 0.4,
     "secondMidTerm": 0.4,
     "quiz": 0.1,
-    "labs": 0.1
+    "labs": 0.1,
+    "gradingScale": {
+      "6": "50-59",
+      "7": "60-69",
+      "8": "70-79",
+      "9": "80-89",
+      "10": "90-100"
+    }
   },
   {
     "name": "Бизнис статистика",
@@ -49,7 +56,20 @@
   },
   {
     "name": "Компјутерски мрежи и безбедност",
-    "acronym": "КМиБ"
+    "acronym": "КМиБ",
+    "firstMidtermTheoretical": 0.225,
+    "secondMidTermTheoretical": 0.225,
+    "firstMidtermPractical": 0.2,
+    "secondMidTermPractical": 0.2,
+    "quiz": 0.1,
+    "labs": 0.15,
+    "gradingScale": {
+      "6": "50-59",
+      "7": "60-69",
+      "8": "70-79",
+      "9": "80-89",
+      "10": "90-100"
+    }
   },
   {
     "name": "Економија за ИКТ инженери",
