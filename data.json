@@ -36,6 +36,8 @@
     "acronym": "СП",
     "firstMidterm": 0.35,
     "secondMidTerm": 0.45,
+    "quiz": 0.1,
+    "labs": 0.1,
     "gradingScale": {
       "5": "0-49.99",
       "6": "50-59.99",
