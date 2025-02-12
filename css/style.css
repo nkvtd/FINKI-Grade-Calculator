@@ -134,6 +134,10 @@ input:checked + .slider::before {
     margin-right: auto;
 }
 
+#subject-name{
+    text-align: center;
+}
+
 .input-field{
     display: flex;
     justify-content: space-between;
@@ -145,7 +149,7 @@ input:checked + .slider::before {
     border: 0;
     margin-top: 10px;
     width: 50px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
 }
 .input-field label{
@@ -153,7 +157,7 @@ input:checked + .slider::before {
     margin-right: 8px;
     margin-top: 7px;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #calculate-button-container{
@@ -183,7 +187,7 @@ input:checked + .slider::before {
 }
 
 #calculation{
-    font-size: 22px;
+    font-size: 20px;
 }
 #calculation span{
     font-weight: bolder;
@@ -192,7 +196,7 @@ input:checked + .slider::before {
 #footer{
     position: absolute;
     bottom: 0;
-    font-size: 12px;
+    font-size: 8px;
 }
 
 @media (max-width: 768px) {
