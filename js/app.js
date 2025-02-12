@@ -54,7 +54,8 @@ function getInput(subjectName) {
         { key: "quiz", label: "Поени од тестови" },
         { key: "attendance", label: "Поени за присуство" },
         { key: "project", label: "Поени од проект" },
-        { key: "auds", label: "Поени од аудиториски вежби" }
+        { key: "auds", label: "Поени од аудиториски вежби" },
+        { key: "geogebra", label: "Поени од геогебра" }
     ];
 
 
@@ -104,7 +105,8 @@ function getPoints(subject) {
         "quiz",
         "attendance",
         "project",
-        "auds"
+        "auds",
+        "geogebra"
     ];
 
     fields.forEach((field) => {
@@ -123,6 +125,6 @@ function getPoints(subject) {
     let p = document.createElement("p")
 
     p.id=`points`
-    p.innerHTML = `<p>Имате ${points} поени по предметот <span>${subject.name}</span>, што е оцена <span>${grade}</span></p>`
+    p.innerHTML = `<p>Имате ${points.toFixed(2)} поени по предметот <span>${subject.name}</span>, што е оцена <span>${grade}</span></p>`
     document.getElementById("calculation").appendChild(p)
 }
