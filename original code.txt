@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Калкулатор за Поени</title>
+    <meta name="description" content="Калулатор за пресметување на поени и оцени по предмети">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="container">
+    <div id="panel">
+        <div id="subject-selector-container">
+            <div id="subject-selector">
+                <button class="subject">СП</button>
+                <button class="subject">ООП</button>
+                <button class="subject">АОК</button>
+                <button class="subject">КМиБ</button>
+                <button class="subject">СП</button>
+                <button class="subject">ООП</button>
+                <button class="subject">АОК</button>
+                <button class="subject">КМиБ</button>
+                <button class="subject">ООП</button>
+                <button class="subject">АОК</button>
+                <button class="subject">КМиБ</button>
+                <button class="subject">СП</button>
+                <button class="subject">ООП</button>
+                <button class="subject">АОК</button>
+                <button class="subject">КМиБ</button>
+            </div>
+        </div>
+        <div id="info-panel-container">
+            <div id="info-panel">
+                <div id="header">
+                    <h1>Калкулатор за поени</h1>
+                    <div id="toggle-labels">
+                        <h3 id="ispit-label">Испит</h3>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-switch">
+                            <span class="slider"></span>
+                        </label>
+                        <h3 id="kolokvium-label">Колоквиум</h3>
+                    </div>
+                </div>
+                <div id="input-set">
+                    <div class="input-field">
+                        <label for="labsPoints">Поени од лабораториски вежби</label>
+                        <input id="labsPoints">
+                    </div>
+                    <div class="input-field">
+                        <label for="prvKolPoints">Поени од прв колоквиум</label>
+                        <input id="prvKolPoints">
+                    </div>
+                    <div class="input-field">
+                        <label for="vtorKolPoints">Поени од втор колоквиум</label>
+                        <input id="vtorKolPoints">
+                    </div>
+                    <div class="input-field">
+                        <label for="test1Points">Поени од тестови</label>
+                        <input id="test1Points">
+                    </div>
+                </div>
+                <div id="calculate-button-container">
+                    <button id="calculate-button">Пресметај поени</button>
+                </div>
+                <div id="calculation-container">
+                    <div id="calculation">
+                        <p>Имате 78.9 поени по предметот <span>Компјутерски Мрежи и Безбедност</span>,
+                            што е оцена <span>8</span></p>
+                    </div>
+                </div>
+                <div id="footer">
+                    <p>Овој калкулатор не е секогаш точен. Пресметките може да не соодветствуваат со тековните правила и распределби на предметот.</p>
+                    <p>Доколку има измени или промени на истите, контактирајте ме и истите ќе бидат ажурирани и овде.</p>
+                    <p>Доколку некој предмет не е достапен на листата, може сами да си подесите распределба и пресметка <span>овде</span>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="application/javascript" src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    line-height: 1;
+    font-family: Candara, Calibri, Arial, Tahoma, Helvetica, sans-serif;
+    color: #666;
+    background: url(../img/background.jpg) center top repeat-x #fbfbfb;
+}
+
+#container{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+#panel{
+    min-width: 700px;
+    width: 700px;
+    margin: 2em auto;
+    background-color: #fff;
+    border: 0 solid #000;
+    padding: 0;
+    border-radius: 24px;
+    -webkit-box-shadow: 2px 2px 24px #000;
+    display: flex;
+    flex-direction: row;
+}
+
+#subject-selector-container {
+    width: 20%;
+    overflow-y: auto;
+    min-height: 500px;
+    height: 90vh;
+    justify-content: flex-end;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+}
+
+#subject-selector{
+    background: #d0d1d3;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#subject-selector .subject {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #e4e5e7;
+    border: 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#info-panel-container{
+    position: relative;
+    clear: both;
+    padding: 0 1px;
+    margin: 10px 20px 10px 20px;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    margin-top: 50px;
+    font-size: 33px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+#toggle-labels {
+    display: flex;
+    justify-content: space-between;
+}
+#kolokvium-label, #ispit-label {
+    font-size: 16px;
+}
+#kolokvium-label {
+    margin-left: auto;
+}
+#ispit-label {
+    margin-right: auto;
+}
+
+#input-set{
+    width: 350px;
+    min-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-field{
+    display: flex;
+    justify-content: space-between;
+}
+.input-field input{
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #f0f1f3;
+    border: 0;
+    margin-top: 10px;
+    width: 50px;
+    font-size: 18px;
+}
+.input-field label{
+    clear: both;
+    margin-right: 8px;
+    margin-top: 7px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+#calculate-button-container{
+    width: 140px;
+    min-width: 140px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#calculate-button{
+    clear: none;
+    padding: 6px;
+    width: 140px;
+    border-radius: 4px;
+    background-color: #b0b0b3;
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#calculation-container{
+    width: 400px;
+    min-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#calculation{
+    font-size: 22px;
+}
+#calculation span{
+    font-weight: bolder;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+}
