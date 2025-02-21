@@ -1,84 +1,37 @@
 body{
     line-height: 1;
-    font-family: Candara, Calibri, Arial, Tahoma, Helvetica, sans-serif;
-    color: #666;
-    background: url(../img/background.jpg) center top repeat-x #fbfbfb;
-}
-
-#container{
+    font-family: Calibri, Arial, Tahoma, Helvetica, sans-serif;
+    color: #333333;
     margin: 0;
     padding: 0;
-    border: 0;
-    vertical-align: baseline;
-}
-#panel{
-    max-width: 700px;
-    width: 700px;
-    margin: 2em auto;
-    background-color: #fff;
-    border: 0 solid #000;
-    padding: 0;
-    border-radius: 24px;
-    -webkit-box-shadow: 2px 2px 24px #000;
-    display: flex;
-    flex-direction: row;
 }
 
-#subject-selector-container {
-    width: 20%;
-    overflow-y: auto;
-    /*min-height: 500px;*/
-    height: 90vh;
-    justify-content: flex-end;
-    border-bottom-left-radius: 24px;
-    border-top-left-radius: 24px;
-}
 
-#subject-selector{
-    background: #d0d1d3;
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-#subject-selector .subject {
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    background-color: #e4e5e7;
-    border: 0;
-    border-radius: 12px;
-    text-align: center;
-}
-
-#subject-selector .subject:hover {
-    clear: none;
-    background-color: #b0b0b3;
-    font-weight: bold;
-}
-
-#info-panel-container{
-    position: relative;
-    clear: both;
-    padding: 0 1px;
-    margin: 10px 20px 10px 20px;
-}
-
-#header{
+header{
+    grid-area: header;
     display: flex;
     justify-content: space-between;
+    padding: 0 4%;
+    background:#BBBBBB;
+}
+#toggleIspit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
 }
 
-h1{
-    margin-top: 50px;
-    font-size: 33px;
+.toggle-label {
+    font-weight: bold;
+    color: #555;
 }
-
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin: 10px;
+    width: 50px;
+    height: 24px;
 }
 
 .switch input {
@@ -86,6 +39,7 @@ h1{
     width: 0;
     height: 0;
 }
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -93,54 +47,49 @@ h1{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-}
-.slider::before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+    background-color: #333333;
+    border-radius: 24px;
+    transition: 0.4s;
 }
 
-input:checked + .slider::before {
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-#toggle-labels {
+#main {
     display: flex;
-    justify-content: space-between;
-}
-#kolokvium-label, #ispit-label {
-    font-size: 16px;
-}
-#kolokvium-label {
-    margin-left: auto;
-}
-#ispit-label {
-    margin-right: auto;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-#input-set{
-    width: 350px;
-    min-width: 350px;
-    margin-left: auto;
-    margin-right: auto;
+#result-field{
+    grid-area: main;
+    display: flex;
+    justify-content: space-evenly;
+    background: #DDDDDD;
+    width: 100%;
+    padding: 20px;
+    flex-grow: 1;
 }
-
 #subject-name{
+    font-size: 30px;
     text-align: center;
 }
-
 .input-field{
     display: flex;
     justify-content: space-between;
+    width: 500px;
 }
 .input-field input{
     padding: 4px;
@@ -153,153 +102,211 @@ input:checked + .slider::before {
     text-align: center;
 }
 .input-field label{
-    clear: both;
     margin-right: 8px;
     margin-top: 7px;
-    line-height: 1.5;
-    font-size: 16px;
+    line-height: 2;
+    font-size: 25px;
 }
-
+#score{
+    align-content: center;
+    vertical-align: center;
+    width: 300px;
+}
+#score p{
+    font-size: 30px;
+}
+#score p>span{
+    font-weight: bolder;
+}
 #calculate-button-container{
-    width: 140px;
-    min-width: 140px;
-    margin-top: 30px;
+    width: 150px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
 #calculate-button{
-    clear: none;
-    padding: 6px;
-    width: 140px;
-    border-radius: 4px;
-    background-color: #b0b0b3;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
     border: 0;
-    font-weight: bold;
+    font-weight:bolder;
+    font-size: 16px;
+    line-height: 1.5;
     letter-spacing: 2px;
+    background: #333333;
+    color: #EEEEEE;
+}
+#calculate-button:hover{
+    font-size: 17px;
 }
 
-#calculation-container{
-    width: 400px;
-    /*min-width: 400px;*/
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+#subjects-container{
+    grid-area: sidebar;
+    overflow-y: auto;
 }
-
-#calculation{
-    font-size: 20px;
+.subject {
+    padding: 5px 10px;
+    margin: 12px;
+    background: #e4e5e7;
+    border: 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 25px;
 }
-#calculation span{
+.subject:hover{
+    background: #333333;
+    color: #EEEEEE;
     font-weight: bolder;
 }
 
-#footer{
-    position: absolute;
+footer{
+    grid-area: footer;
+    padding: 10px;
     bottom: 0;
-    font-size: 8px;
+    width: 100%;
+    background: #DDDDDD;
+    display: flex;
+    justify-content: center;
+    color: #BBBBBB;
 }
 
-@media (max-width: 768px) {
-    body {
-        background: none;
-        padding: 0;
-        margin: 0;
+#container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer sidebar";
+}
+
+@media (max-width: 768px){
+    #main {
+        display: contents;
     }
 
-    #panel {
-        width: 90%;
-        max-width: none;
-        flex-direction: column;
-        box-shadow: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 10px;
+    footer {
+        grid-area: footer;
     }
 
-    #subject-selector-container {
+    #container {
         width: 100%;
-        height: auto;
-        border-radius: 0;
-        order: 2;
-        padding: 10px;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
-    #subject-selector {
-        border-radius: 14px;
+    header {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        background: #f0f1f3;
-        padding: 5px;
+        padding: 15px;
+        background: #BBBBBB;
     }
 
-    #subject-selector .subject {
-        margin: 3px;
-        padding: 8px;
-        font-size: 12px;
-    }
-
-    #info-panel-container {
-        width: 100%;
+    header h1 {
         margin: 0;
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 20px;
+        font-size: 24px;
         text-align: center;
+    }
+
+    #toggleIspit {
         margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 
-    #toggle-labels {
-        font-size: 14px;
+    .toggle-label {
+        font-size: 16px;
+        color: #555;
     }
 
-    #input-set {
+    .switch {
+        width: 50px;
+        height: 24px;
+    }
+
+    #result-field {
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        min-width: auto;
-        padding: 5px;
+        padding: 20px 0;
+        box-sizing: border-box;
     }
 
     .input-field {
-        flex-direction: column;
+        display: flex;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 10px;
+        box-sizing: border-box;
     }
 
     .input-field label {
-        text-align: center;
-        margin-bottom: 5px;
-        font-size: 14px;
+        font-size: 18px;
+        white-space: nowrap;
+        margin-right: 8px;
+        margin-top: 0;
     }
 
     .input-field input {
-        width: 70px;
-        font-size: 16px;
+        width: 40px;
+        font-size: 18px;
+        margin: 0;
     }
 
-    #calculate-button-container {
-        width: 100%;
+    #subject-name {
+        font-size: 24px;
         text-align: center;
-        margin-top: 15px;
     }
 
-    #calculate-button {
+    #score {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
+
+    #subjects-container {
+        grid-area: sidebar;
+        overflow-y: visible;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .subject {
         width: 80%;
-        font-size: 14px;
+        margin: 5px 0;
+        font-size: 20px;
+        box-sizing: border-box;
     }
 
-    #calculation-container {
+    footer {
+        grid-area: footer;
         width: 100%;
-        font-size: 12px;
+        box-sizing: border-box;
         text-align: center;
         padding: 10px;
-    }
-
-    #footer {
-        position: relative;
-        font-size: 12px;
-        text-align: center;
-        padding: 10px;
-        word-wrap: break-word;
+        margin: 0 auto;
+        background: #d0d1d3;
     }
 }
