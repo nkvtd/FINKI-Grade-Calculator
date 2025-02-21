@@ -5,53 +5,48 @@
     <title>Калкулатор за Поени</title>
     <meta name="description" content="Калулатор за пресметување на поени и оцени по предмети">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <div id="container">
-    <div id="panel">
-        <div id="subject-selector-container">
-            <div id="subject-selector">
-            </div>
+    <header>
+        <h1>Калкулатор за Поени</h1>
+        <div id="toggleIspit">
+            <span class="toggle-label">Испит</span>
+            <label class="switch">
+                <input type="checkbox" id="examToggle">
+                <span class="slider" onclick="updateToggle()"></span>
+            </label>
+            <span class="toggle-label">Колоквиум</span>
         </div>
-        <div id="info-panel-container">
-            <div id="info-panel">
-                <div id="header">
-                    <h1>Калкулатор за поени</h1>
-                    <div id="toggle-labels">
-                        <h3 id="ispit-label">Испит</h3>
-                        <label class="switch">
-                            <input type="checkbox" id="toggle-switch" onclick="updateToggle()">
-                            <span class="slider"></span>
-                        </label>
-                        <h3 id="kolokvium-label">Колоквиум</h3>
-                    </div>
-                </div>
+    </header>
+    <div id="main">
+        <div id="result-field">
+            <div id="input">
                 <h3 id="subject-name"></h3>
                 <div id="input-set">
-<!--                    <div class="input-field">-->
-<!--                        <label for="labsPoints">Поени од лабораториски вежби</label>-->
-<!--                        <input id="labsPoints" required>-->
-<!--                    </div>-->
+
                 </div>
                 <div id="calculate-button-container">
-<!--                    <button id="calculate-button">Пресметај поени</button>-->
-                </div>
-                <div id="calculation-container">
-                    <div id="calculation">
-                    </div>
-                </div>
-                <div id="footer">
-                    <p>Овој калкулатор не е секогаш точен. Пресметките може да не соодветствуваат со тековните правила и распределби на предметот.</p>
-                    <p>Доколку има измени или промени на истите, контактирајте ме и истите ќе бидат ажурирани и овде.</p>
-                    <p>Доколку некој предмет не е достапен на листата, може сами да си подесите распределба и пресметка <span>овде</span>.</p>
+
                 </div>
             </div>
+            <div id="score">
+
+            </div>
         </div>
+        <footer>
+            <div id="footer-container">
+                <p>Овој калкулатор не е секогаш точен. Пресметките може да не соодветствуваат со тековните правила и распределби на предметот.</p>
+                <p>Доколку има измени или промени на истите, контактирајте ме и истите ќе бидат ажурирани и овде.</p>
+                <p>Доколку некој предмет не е достапен на листата, може сами да си подесите распределба и пресметка <span>овде</span>.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="subjects-container"  style="background:#d0d1d3">
+
     </div>
 </div>
-
-
 
 <script src="js/app.js"></script>
 </body>
