@@ -143,6 +143,7 @@ input:checked + .slider:before {
 #subjects-container{
     grid-area: sidebar;
     overflow-y: auto;
+    background:#d0d1d3;
 }
 .subject {
     padding: 5px 10px;
@@ -282,6 +283,7 @@ footer{
     }
 
     #subjects-container {
+        background:#d0d1d3;
         grid-area: sidebar;
         overflow-y: visible;
         height: auto;
