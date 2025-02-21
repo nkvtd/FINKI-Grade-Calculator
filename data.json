@@ -2,8 +2,13 @@
   {
     "name": "Бизнис и менаџмент",
     "acronym": "БиМ",
-    "firstMidterm": 0.4,
-    "secondMidTerm": 0.4,
+    "midterm": {
+      "firstMidterm": 0.4,
+      "secondMidTerm": 0.4
+    },
+    "exam": {
+      "exam": 0.8
+    },
     "attendance": 0.1,
     "project": 0.1,
     "gradingScale": {
@@ -18,8 +23,13 @@
   {
     "name": "Вовед во компјутерските науки",
     "acronym": "ВвКН",
-    "firstMidterm": 0.45,
-    "secondMidTerm": 0.45,
+    "midterm": {
+      "firstMidterm": 0.45,
+      "secondMidTerm": 0.45
+    },
+    "exam": {
+      "exam": 0.9
+    },
     "attendance": 0.1,
     "labs": 0.1,
     "gradingScale": {
@@ -34,8 +44,13 @@
   {
     "name": "Структурно програмирање",
     "acronym": "СП",
-    "firstMidterm": 0.35,
-    "secondMidTerm": 0.45,
+    "midterm": {
+      "firstMidterm": 0.35,
+      "secondMidTerm": 0.45
+    },
+    "exam": {
+      "exam": 0.8
+    },
     "quiz": 0.1,
     "labs": 0.1,
     "gradingScale": {
@@ -50,8 +65,13 @@
   {
     "name": "Избрани теми од математика",
     "acronym": "ИТоМ",
-    "firstMidterm": 0.5,
-    "secondMidTerm": 0.5,
+    "midterm": {
+      "firstMidterm": 0.5,
+      "secondMidTerm": 0.5
+    },
+    "exam": {
+      "exam": 1
+    },
     "gradingScale": {
       "5": "0-49.99",
       "6": "50-59.99",
@@ -64,8 +84,13 @@
   {
     "name": "Математика 1",
     "acronym": "М1",
-    "firstMidterm": 0.45,
-    "secondMidTerm": 0.45,
+    "midterm": {
+      "firstMidterm": 0.45,
+      "secondMidTerm": 0.45
+    },
+    "exam": {
+      "exam": 0.9
+    },
     "geogebra": 0.1,
     "gradingScale": {
       "5": "0-49.99",
@@ -87,8 +112,13 @@
   {
     "name": "Архитектура и организација на компјутери",
     "acronym": "АОК",
-    "firstMidterm": 0.45,
-    "secondMidTerm": 0.45,
+    "midterm": {
+      "firstMidterm": 0.45,
+      "secondMidTerm": 0.45
+    },
+    "exam": {
+      "exam": 0.9
+    },
     "labs": 0.1,
     "gradingScale": {
       "5": "0-49.99",
@@ -102,8 +132,13 @@
   {
     "name": "Објектно-ориентирано програмирање",
     "acronym": "ООП",
-    "firstMidterm": 0.4,
-    "secondMidTerm": 0.4,
+    "midterm": {
+      "firstMidterm": 0.4,
+      "secondMidTerm": 0.4
+    },
+    "exam": {
+      "exam": 0.8
+    },
     "quiz": 0.1,
     "labs": 0.1,
     "gradingScale": {
@@ -118,8 +153,13 @@
   {
     "name": "Бизнис статистика",
     "acronym": "БС",
-    "firstMidterm": 0.5,
-    "secondMidTerm": 0.5,
+    "midterm": {
+      "firstMidterm": 0.5,
+      "secondMidTerm": 0.5
+    },
+    "exam": {
+      "exam": 0.9
+    },
     "project": 0.15,
     "gradingScale": {
       "5": "0-59.99",
@@ -133,9 +173,14 @@
   {
     "name": "Основи на Веб дизајн",
     "acronym": "ОнВД",
-    "firstMidterm": 0.3,
-    "secondMidTermTheoretical": 0.21,
-    "secondMidTermPractical": 0.49,
+    "midterm": {
+      "firstMidterm": 0.3,
+      "secondMidTermTheoretical": 0.21,
+      "secondMidTermPractical": 0.49
+    },
+    "exam": {
+
+    },
     "project": 0.05,
     "labs": 0.1,
     "gradingScale": {
@@ -166,8 +211,13 @@
   {
     "name": "Основи на сајбер безбедноста",
     "acronym": "ОнСБ",
-    "firstMidterm": 0.2,
-    "secondMidTerm": 0.2,
+    "midterm": {
+      "firstMidterm": 0.2,
+      "secondMidTerm": 0.2
+    },
+    "exam": {
+      "exam": 0.4
+    },
     "project": 0.2,
     "labs": 0.3,
     "attendance": 0.1,
@@ -187,10 +237,16 @@
   {
     "name": "Компјутерски мрежи и безбедност",
     "acronym": "КМиБ",
-    "firstMidtermTheoretical": 0.225,
-    "secondMidTermTheoretical": 0.225,
-    "firstMidtermPractical": 0.2,
-    "secondMidTermPractical": 0.2,
+    "midterm": {
+      "firstMidtermTheoretical": 0.225,
+      "secondMidTermTheoretical": 0.225,
+      "firstMidtermPractical": 0.2,
+      "secondMidTermPractical": 0.2
+    },
+    "exam": {
+      "examTheoretical": 0.45,
+      "examPractical": 0.4
+    },
     "quiz": 0.1,
     "labs": 0.15,
     "gradingScale": {
@@ -205,8 +261,13 @@
   {
     "name": "Економија за ИКТ инженери",
     "acronym": "ЕзИИ",
-    "firstMidterm": 0.35,
-    "secondMidTerm": 0.35,
+    "midterm": {
+      "firstMidterm": 0.45,
+      "secondMidTerm": 0.45
+    },
+    "exam": {
+      "exam": 0.7
+    },
     "labs": 0.15,
     "auds": 0.15,
     "gradingScale": {
@@ -245,10 +306,17 @@
   {
     "name": "Интернет Програмирање на Клиентска Страна",
     "acronym": "ИПнКС",
-    "firstMidtermTheoretical": 1,
-    "secondMidTermTheoretical": 1,
-    "firstMidtermPractical": 1,
-    "secondMidTermPractical": 1,
+    "midterm": {
+      "firstMidtermTheoretical": 1,
+      "secondMidTermTheoretical": 1,
+      "firstMidtermPractical": 1,
+      "secondMidTermPractical": 1
+    },
+    "exam": {
+      "examTheoretical": 1,
+      "examPractical": 1
+    },
+
     "labs": 0.1,
     "gradingScale": {
       "5": "0-100.99",
@@ -266,8 +334,13 @@
   {
     "name": "Управување со Техничка Поддршка",
     "acronym": "УТП",
-    "firstMidterm": 0.2,
-    "secondMidTerm": 0.2,
+    "midterm": {
+      "firstMidterm": 0.2,
+      "secondMidTerm": 0.2
+    },
+    "exam": {
+      "exam": 0.4
+    },
     "project": 0.2,
     "labs": 0.3,
     "attendance": 0.1,
