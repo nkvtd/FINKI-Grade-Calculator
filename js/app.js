@@ -36,6 +36,10 @@ function getInput(subjectName) {
     if(existingButton){
         existingButton.remove()
     }
+    let existingScore = document.getElementById("score")
+    if(existingScore){
+        existingScore.innerHTML=""
+    }
 
     let subject = subjects.find((s) => s.name === subjectName)
 
@@ -92,7 +96,6 @@ function getInput(subjectName) {
                 let inputElement = document.createElement("input");
                 inputElement.id = field.key;
                 inputElement.name = field.key;
-                inputElement.required = true;
 
                 div.appendChild(labelElement);
                 div.appendChild(inputElement);
@@ -103,10 +106,10 @@ function getInput(subjectName) {
 
 
     const fields = [
-        { key: "labs", label: "Поени од лабораториски вежби" },
         { key: "quiz", label: "Поени од тестови" },
-        { key: "attendance", label: "Поени за присуство" },
         { key: "project", label: "Поени од проект" },
+        { key: "attendance", label: "Поени за присуство" },
+        { key: "labs", label: "Поени од лабораториски вежби" },
         { key: "auds", label: "Поени од аудиториски вежби" },
         { key: "geogebra", label: "Поени од геогебра" }
     ];
@@ -136,4 +139,93 @@ function getInput(subjectName) {
     button.innerHTML="Пресметај поени"
     button.onclick=()=>getPoints(subject)
     document.getElementById("calculate-button-container").appendChild(button)
+}
+
+function getPoints(subject){
+    let existingP = document.getElementById("points")
+    if(existingP){
+        existingP.remove()
+    }
+    let points = 0.00
+    let valid = true
+
+    if(exam){
+        const examFields = [
+            "exam",
+            "examPractical",
+            "examTheoretical",
+        ];
+
+        examFields.forEach((field) => {
+            let input = document.getElementById(field)
+
+            if (input && input.value) {
+                if((input.value < 0 || input.value > 100)){
+                    valid = false
+                }
+                points += parseFloat(input.value)*subject.exam[field]
+            }
+        });
+
+    } else {
+        const midtermFields = [
+            "firstMidterm",
+            "secondMidTerm",
+            "firstMidtermTheoretical",
+            "firstMidtermPractical",
+            "secondMidTermTheoretical",
+            "secondMidTermPractical",
+        ];
+
+        midtermFields.forEach((field) => {
+            let input = document.getElementById(field)
+
+            if (input && input.value) {
+                if((input.value < 0 || input.value > 100)){
+                    valid = false
+                }
+                points += parseFloat(input.value)*subject.midterm[field]
+            }
+        });
+    }
+
+    const fields = [
+        "quiz",
+        "project",
+        "attendance",
+        "labs",
+        "auds",
+        "geogebra",
+    ];
+
+    fields.forEach((field) => {
+        let input = document.getElementById(field)
+
+        if (input && input.value) {
+            if(input.value < 0 || input.value > 100){
+                valid = false
+            }
+            points += parseFloat(input.value)*subject[field]
+        }
+    });
+
+    let grade = Object.keys(subject.gradingScale).find(g => {
+        let [low, high] = subject.gradingScale[g].split('-').map(Number);
+        return points >= low && points <= high;
+    })
+
+    if(valid && !isNaN(valid) && points > 0){
+        let p = document.createElement("p")
+
+        p.id=`points`
+        p.innerHTML = `<p>Имате <span>${points.toFixed(2)}</span> поени, што е оцена <span>${grade}</span>.</p>`
+        document.getElementById("score").appendChild(p)
+    } else {
+
+        const container = document.getElementById("result-field");
+        container.classList.add("shake");
+        setTimeout(() => {
+            container.classList.remove("shake");
+        }, 500);
+    }
 }
