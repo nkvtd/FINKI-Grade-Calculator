@@ -197,7 +197,7 @@
     "acronym": "М2"
   },
   {
-    "name": "Објектно ориентирана анализа и дизајн\n",
+    "name": "Објектно ориентирана анализа и дизајн",
     "acronym": "ООАиД"
   },
   {
@@ -262,8 +262,8 @@
     "name": "Економија за ИКТ инженери",
     "acronym": "ЕзИИ",
     "midterm": {
-      "firstMidterm": 0.45,
-      "secondMidTerm": 0.45
+      "firstMidterm": 0.35,
+      "secondMidTerm": 0.35
     },
     "exam": {
       "exam": 0.7
@@ -367,11 +367,48 @@
   },
   {
     "name": "Маркетинг",
-    "acronym": "Марк"
+    "acronym": "Марк",
+    "midterm": {
+      "firstMidterm": 0.35,
+      "secondMidTerm": 0.35
+    },
+    "exam": {
+      "exam": 0.7
+    },
+    "labs": 0.1,
+    "auds": 0.1,
+    "attendance": 0.1,
+    "gradingScale": {
+      "5": "0-49.99",
+      "6": "50-59.99",
+      "7": "60-69.99",
+      "8": "70-79.99",
+      "9": "80-89.99",
+      "10": "90-110"
+    }
   },
   {
     "name": "Оперативни системи",
-    "acronym": "ОС"
+    "acronym": "ОС",
+    "midterm": {
+      "firstMidtermTheoretical": 0.225,
+      "secondMidTermTheoretical": 0.225,
+      "firstMidtermPractical": 0.225,
+      "secondMidTermPractical": 0.2225
+    },
+    "exam": {
+      "examTheoretical": 0.45,
+      "examPractical": 0.45
+    },
+    "labs": 0.1,
+    "gradingScale": {
+      "5": "0-49.99",
+      "6": "50-59.99",
+      "7": "60-69.99",
+      "8": "70-79.99",
+      "9": "80-89.99",
+      "10": "90-110"
+    }
   },
   {
     "name": "Софтверско инженерство",
@@ -468,10 +505,6 @@
   {
     "name": "Основи на теоријата на компјутерските науки",
     "acronym": "ОнТнКН"
-  },
-  {
-    "name": "Складови на податоци и аналитичка обработка",
-    "acronym": "СПАО"
   },
   {
     "name": "Виртуелизација",
