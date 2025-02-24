@@ -6,7 +6,6 @@ body{
     padding: 0;
 }
 
-
 header{
     grid-area: header;
     display: flex;
@@ -144,6 +143,7 @@ input:checked + .slider:before {
     grid-area: sidebar;
     overflow-y: auto;
     background:#d0d1d3;
+    z-index: 1;
 }
 .subject {
     padding: 5px 10px;
@@ -183,6 +183,7 @@ footer{
 }
 
 @media (max-width: 768px){
+
     #main {
         display: contents;
     }
@@ -311,4 +312,17 @@ footer{
         margin: 0 auto;
         background: #d0d1d3;
     }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s;
 }
